@@ -1,0 +1,769 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber,style=chicago-authordate,uniquename=false,maxbibnames = 99]{biblatex}
+	\bibliography{gepap.bib}
+\usepackage{multicol}
+\usepackage{ntheorem}
+	\theoremseparator{:}
+	\newtheorem{hyp}{Hypothesis} 
+	\newtheorem{subhyp}{Hypothesis}[hyp]
+	\renewcommand\thesubhyp{\thehyp\alph{subhyp}}
+\usepackage{lscape}
+\usepackage{lipsum}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{etoolbox}
+	\AtBeginEnvironment{quote}{\singlespacing\small}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage[title]{appendix}
+\usepackage{float}
+\usepackage{subcaption}
+	\captionsetup{belowskip=12pt,aboveskip=4pt}
+\usepackage{cleveref}
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\usepackage{tablefootnote}
+\usepackage{setspace}
+	\interfootnotelinepenalty=10000
+\usepackage{fullpage}
+\usepackage{geometry}
+    \geometry{top=1in, bottom = 1in, left = 1in, right = 1in}
+\usepackage{endnotes}
+%\usepackage{floatrow}
+
+
+    \doublespacing
+    \setlength{\parindent}{1cm}
+	\setlength{\headsep}{0in}
+\newcommand{\pkg}[1]{{\fontseries{b}\selectfont #1}}
+
+
+
+
+
+%%%%PAPER INFO%%%%
+\title{Gridlock, Elite Polarization, and Attitudes About the Parties}
+\author{Maxwell B. Allamong \thanks{Ph.D. Student of Political Science, Texas A\&M University, allamong@tamu.edu}}
+%\affil{Department of Political Science, Texas A\&M University}
+\date{\today}
+
+
+
+%%%%SPACING, START DOC, TITLE%%%%
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\doublespacing
+
+
+
+
+
+ %%%% ABSTRACT %%%%
+
+\begin{abstract} 
+Scholars have argued that the growth of polarization among partisan elites in the U.S. has made it easier for members of the mass public to differentiate the parties, thereby strengthening the power of partisanship as a predictor of mass attitudes and behaviors. And while partisans in the mass public may be relying more upon partisanship to guide them, it remains unclear why people feel \textit{less} favorable towards their own party than they did in the past. I argue that peoples' attitudes towards both their own party and the other party are not only a function of the degree of differentiation between the parties, but are also a function of the parties' productivity in Congress: when gridlock keeps partisan elites from addressing salient political issues, partisans becomes less favorable toward both parties. Furthermore, when the divisions between elites become increasingly clear, the negative effects of gridlock on in-party favorability are exacerbated.
+\end{abstract}
+\clearpage
+\pagenumbering{arabic}
+
+
+
+
+
+
+
+
+
+%% INTRODUCTION
+\section{Introduction}
+% What is the research question?
+Few words better describe the American political scene in recent years than ``polarized." At the elite level, Democratic and Republican members of Congress have steadily drifted apart, producing the ideologically homogeneous parties that we observe today \parencite{mccarty2016polarized,levendusky2009partisan}. At the mass level, partisans are increasingly relying upon their partisanship as a driver of their political attitudes and behaviors, such as their evaluations of candidates \parencite{iyengar2018strengthening} and vote choice \parencite{bartels2000partisanship}. It is puzzling, then, that during the same period in which elite polarization is said to have produced a ``resurgence" of mass partisanship \parencite{hetherington2001resurgent}, partisans' favorability ratings of their own party appear to have \textit{decreased}, reaching a record low of 66 out of 100 according to the American National Election Studies' (ANES) ``feeling thermometers" \parencite{iyengar2019origins}.\footnote{The ANES feeling thermometers ask respondents to rate the Republican and Democratic parties on scales that range from 0 (most negative attidues) to 100 (most positive attitudes), with 50 being neutral.} If elite polarization has facilitated the growing power of partisanship as a predictor of mass attitudes and behaviors, why have partisans not come to hold more favorable opinions of their own party?
+
+% What will I argue?
+I argue that mass attitudes towards one's own and the other party are not only determined by the degree of differentiation between the parties in Congress, but also by the parties' legislative productivity. Research shows that partisan conflict in Congress \parencite{ramirez2009dynamics} and the gridlock that may follow \parencite{flynn2016partisan} leads to depressed evaluations of the legislative branch. And while partisan elites may not cooperate with one another, partisans in the mass public are not all that polarized in their issue positions \parencite{hetherington2009putting}, and are largely favorable towards the concept of compromise \parencite{wolak2020compromise}. On the issues that opposing partisans do hold a consensus, most would rather the out-party pass their preferred policy than see gridlock continue \parencite{flynn2016partisan}. I build on this literature by suggesting that the contempt felt for a gridlocked Congress is extended to both the in- and out-party, such that, as the parties in government have brought the legislative branch to a halt, peoples' evaluations of both parties are expected to decrease. Furthermore, as the parties become increasingly distinct, the punishment dealt to both parties for producing gridlock in the legislative process is expected to be increasingly severe. This may explain why, even in an era when the parties are clearly differentiated, evaluations of the in-party have not reached historically high levels.
+
+%As the distinctions between the parties have become increasingly clear, partisans in the mass public have also begun to show signs of polarization, not so much on matters of public policy, but in terms of their emotional responses to the in- and out-parties \parencite{iyengar2012affect}. Also called \textit{affective polarization}, studies have shown that the gap in partisans' attitudes toward the in- and out-parties has grown considerably over time \parencite{boxell2020cross}. More importantly, there is emerging evidence that the growth in elite polarization is primarily responsible for the growth of the affective gap between partisans in the mass public \parencite{banda2018elite}. 
+
+% What do we still need to know? 
+%However, when we pull apart the measures that make up the affective gap between partisans --- that is, attitudes towards the in-party and out-party ---we see that the growth in affective polarization has largely stemmed from increasingly unfavorable opinions of the out-party. Favorability toward one's own party, on the other hand, has remained only lukewarm, dipping as low as 66 out of 100 on the American National Election Studies (ANES) ``feeling thermometers" in 2016 \parencite{iyengar2019origins}.\footnote{The ANES feeling thermometers ask respondents to rate the Republican and Democratic parties on scales that range from 0 (most negative attidues) to 100 (most positive attitudes), with 50 being neutral.} Considering the tremendous amount of scholarly work that documents the growing importance of partisanship in the mass public --- from the increasing power of partisanship as a predictor of vote choice \parencite{bartels2000partisanship} to the growing tendency of partisans to discount economic information in favor of partisan considerations \parencite{ellis2020polarization} --- the fact that in-party favorability appears to be \textit{decreasing} produces an interesting puzzle that has yet to be solved. That is, if elite polarization is truly responsible for strengthening the psychological \parencite{hetherington2001resurgent} and social \parencite{iyengar2012affect,mason2018uncivil} attachment that characterizes partisanship, why has in-party favorability not exploded in recent decades?
+
+
+
+% how will i test my argument
+Using biennial data that range from the 95$^{\text{th}}$ to the 114$^{\text{th}}$ U.S. Congress, I examine the effects of elite polarization and gridlock on attitudes towards the in- and out-parties. I find suggestive evidence that partisan polarization among members of the House of Representatives lead individuals to feel more favorable toward their own party, while polarization in either chamber of Congress leads to depressed evaluations of the out-party. This is to say that partisans know who to love, and who to hate, when the divisions between the parties are clear. However, I also find that gridlock reduces evaluations of both the in- and out-parties, with the negative effects of gridlock on in-party attitudes becoming even stronger when elites are polarized. The implication here is that, not only has gridlock in Congress depressed partisans' favorability toward both parties, but that elite polarization has made it even easier for partisans to assign some of that blame to their own party. % TODO Intro - is explanation of interaction clear?
+
+%propose and test two hypotheses: (1) that elite polarization will have positive effect on in-party attitudes, but a negative effect on out-party attitudes (the Elite Polarization Hypothesis), and (2) that gridlock will have a negative effect on both in- and out-party attitudes (the Gridlock Hypothesis). Statistical analyses reveal that both elite polarization and Congressional gridlock have consistently negative effects on the mass public's evaluation of the out-party, as expected. With regards to in-party favorability, I find the expected positive effect of elite polarization, but only when polarization is measured in the U.S. House of Representatives (but not the Senate). Gridlock also tends to have the expected negative effect on in-party favorability, but this finding is sensitive to model specification. Overall, the evidence is suggestive that elite polarization does have opposing effects on in- and out-party favorability, but Congressional gridlock appears to pull down favorability ratings of both parties. 
+
+% what are my contributions
+This study advances our understanding of elite and mass partisan polarization in two clear ways. First and foremost, I provide an explanation for an apparent contradiction that has yet to be addressed in the literature -- that is, people today appear to be relying more heavily upon their partisanship to guide their political behaviors, but continue to hold only mildly favorable views of their own party. The explanation I offer introduces a new institutional factor -- Congressional gridlock -- into the study of mass affective polarization. Through my analyses, I am able to show that gridlock is capable of influencing attitudes towards both the in- and out-parties. Second, although previous work has shown that gridlock and polarization impact evaluations of Congress as as whole, I demonstrate that the effects of these elite-driven processes extend to evaluations of the parties. Parties are influential actors in the legislative process, and when their actions bring the legislative process to a halt, partisans in the mass public respond by lowering their evaluations of the parties. Together, these advancements suggests that the relationship between the polarization of partisan elites and attitudes of partisans in the mass public is more nuanced than previously believed.
+
+%while mass partisan polarization is typically conceptualized as the gap in favorability felt toward one's own party and the out-party, I make the case that elite polarization should have distinct impacts on in- and out-party favorability. Knowing that the affective gap between partisans in the mass public is growing is indeed important, but its also important to know if the the growth in this gap is due to heightened in-party favorability, depressed out-party favorability, or both. Second, I engage with a body of work that is concerned with understanding how the partisan-political processes that occur within our institutions --- such as polarization and gridlock --- affect mass partisan attitudes \parencite[e.g.,][]{harbridge2011electoral,banda2018elite,flynn2016partisan}. Third and finally, although previous work has shown that gridlock and polarization impact evaluations of Congress as a whole, I demonstrate that the effects of these elite-driven processes extend to evaluations of the parties.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%how differentiated are the parties? do they address issues of national importance?
+
+%the elite and affective polarization literatures have yet to consider a crucial determinant of in-party favorability: gridlock. 
+%Elite polarization in the United States has progressed steadily over the last several decades, driving a sharp wedge between Democratic and Republican members of Congress \parencite{mccarty2016polarized}. A large body of literature has dedicated itself to examining 
+
+%Scholars have shown that these divisions at the elite level have had harmful downstream consequences for partisans in the mass public, primarily the rise of \textit{affective polarization} \parencite{banda2018elite}, or the growing gap in affect for one's own party and the out-party. As partisan elites have become increasingly distinct, the psychological \parencite{hetherington2001resurgent} and social \parencite{iyengar2012affect,mason2018uncivil} attachment characterizing partisanship has grown stronger , leading partisans to show a positive bias in favor of in-partisans, and a negative bias against out-partisans \parencite{iyengar2015fear,mason2018uncivil}. Numerous studies using experimental methods have demonstrated that polarized elite cues produce affectively polarized responses from ordinary citizens. 
+
+%It is puzzling, then, that over the same time period in which elite polarization has grown considerably -- roughly 1960 to the present -- aggregate favorability ratings of one's own party appear to have remained relatively stable at the mass level, and in recent years, have even reached new lows \parencite{iyengar2018strengthening}. This represents the primary question of interest in this project: why have in-party favorability ratings at the mass level remained relatively stable over time in the face of growing elite polarization?
+
+%Thus, the counter-vailing forces of elite polarization and gridlock on in-party attitudes explains their relative stability in recent decades. These same forces operate in complimentary fashion on out-party attitudes, however, depressing assessments of the out-party to some of the lowest numbers ever observed. 
+
+%Partisan elites in Congress are considerably more polarized than they were in decades 
+
+%literature has yet to fully contend with the consequences of elite polarization, but more specifically, the growth in gridlock that has followed the polarization of elites \parencite{binder1999dynamics}. As \textcite{hetherington2015washington} argue, the growth in affective polarization has made ordinary partisans unwilling to trust the out-party to make sound policy decisions, and without this trust, little is accomplished in Washington. So, while elite polarization helps inform voters about which party they should like and which they should dislike, it has also produce unresponsive government, and when partisan elites fail to deliver on their promises, I expect favorability towards either party -- including one's own party -- to fall.
+
+%risen considerably over time, wtih Republicans being increasingly conservative and Democrats increasingly liberal. This has had lasting effects on partisan in the mass public, though these effects have been largely \textit{affective}, and not necessarily issue based (Kinder and Kalmoe, Mason, hetherington). Numerous studies show that in-party primes lead to increased favoritism of the in-party, and out-party party primes lead prejudice and bias. However, an examination of the over time trend in in-party warmth as measured by the ANES feeling thermometers shows that the growth in polarization has largely stemmed decreases in out-party assessments. In-party ratings, however, have remained near 70 for decades -- in-party warm even reached a new low among Republicans in 2016. What accounts for the discrepancy between the largely body of cross-sectional work on affective polarization and the over-time trends in in-party favoritism?
+
+%Therefore, I argue that the stability in in-party favoritism and the steady decrease in out-party favoritism is driven driven by two related, yet distinct processes: elite polarization and gridlock. Growth in elite polarization is expected to lead to increases in in-party favoritism and decreases in out-party favoritism. Growth in gridlock, however, does not have the same polarizing effects -- increases in gridlock should lead to reduce favorability of both the in- and out-parties. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% ELITE AND MASS POLARIZATION
+\section{Elite and Mass Polarization}
+% Purpose of section: explain how and why elite polarization shapes polarized attitudes among the mass public, noting that we know more about the GAP in in-party/out-party attitudes than we do about each component
+
+% Elites have polarized
+Evidence of polarization among partisan elites in the United States is plentiful. Stemming largely from divisions over issues of civil rights \parencite{carmines1989issue}, Democratic and Republicans elites in Congress have gradually come to occupy distinct ends of the ideological spectrum \parencite{mccarty2016polarized,levendusky2009partisan}. This has led to a considerable amount of partisan conflict in the legislative body \parencite{ramirez2009dynamics}, increased negativity in political advertising \parencite{geer2010fanning}, and increased media attention on elite divisions \parencite{levendusky2009partisan,robison2016elite}. Tensions between partisan elites have even heightened to the point that representatives often avoid mingling with members of the other party on the floor of the U.S House of Representatives following a vote \parencite{dietrich2020measuring}. 
+
+The extent to which partisans in the mass public have polarized is less clear. Some scholars have pointed to fact that partisans today hold more consistently liberal or conservative issue positions -- though not necessarily more extreme positions -- as compared to partisans of the past \parencite{abramowitz2008polarization}. Others have argued that the public remains relatively non-ideological \parencite{kinder2017neither} and has not polarized on the issues to any significant degree \parencite{fiorina2005culture}. Instead, what appears as polarization may be an artifact of partisan sorting, where individuals adjust their partisan identity to fit their ideological identity \parencite{levendusky2009partisan,mason2015disrespectfully,mason2018uncivil}.\footnote{It is also possible for individuals to adjust their ideological identity to fit their partisan identity.} Such a process can give the illusion that Republicans and Democrats in the mass public are polarizing when all that has truly occurred is a shift in partisan or ideological identification. 
+
+While scholars continue to the debate the causes and depth of polarization in the mass public, most agree that the behavior of partisan elites is at least partially responsible for the manifestations of mass polarization that we do observe. Here I describe two specific ways in which growing elite divisions have impacted partisans in the mass public. First, elite polarization has strengthened partisans' \textit{psychological} attachment to their party. Scholars have long recognized partisanship as a form of psychological attachment, responsible for driving important political behaviors such as vote choice and candidate evaluations \parencite{campbell1960american,converse1964nature}. As cues from elites become more clearly divided along partisan lines, it becomes even easier for partisans in the mass public to rely upon the attachment to their party to guide their decision-making \parencite{druckman2013elite,levendusky2010clearer,bartels2000partisanship}. This, \textcite{hetherington2001resurgent} argues, explains the ``resurgence" of partisanship --- in the form of increased straight-ticket voting and partisans' greater ability to differentiate the parties --- that we observe in the latter half of the 20$^{th}$ century. 
+
+The second consequence of elite polarization is that it has strengthened partisans' \textit{social} attachment to their party. Co-partisans may not agree entirely on the issues, but they nonetheless share a social bond over their membership in the same party. The strengthening of this social bond between partisans has resulted in the growth of affective polarization, defined as the gap in favorability towards the in-party/in-partisans and the out-party/out-partisans \parencite{iyengar2012affect,iyengar2015fear}. Evidence of this type of partisan bias can be seen in dating patterns \parencite{huber2017political}, character evaluations of other partisans \parencite{iyengar2012affect,mason2018uncivil}, and judgments of those that are helped or harmed by public policy \parencite{allamong2020screw}. In each of these settings, the social attachment shared among partisans leads them to demonstrate preferential treatment towards those that share their partisan identity, but discriminate against those from the opposite party. 
+
+The preceding discussion makes clear the relationship between elite polarization and the political attitudes of partisans in the mass public: as the differences between the parties at the elite level have become further clarified, the psychological and social attachment that individuals have with their party has strengthened. Partisans are now better able to distinguish the issues and individuals associated with either party and have adjusted their political attitudes and behaviors accordingly. And while there is preliminary evidence to suggest that elite polarization is related to the growing \textit{gap} in partisans' attitudes towards the parties \parencite{banda2018elite}, I argue that this gap should stem from both  increasingly favorable views of the in-party, as well as increasingly unfavorable views of the out-party. Therefore, I expect increases in elite polarization to produce positive evaluations of the in-party, but negative evaluations of the out-party, all else held constant. This represents my \textit{Elite Polarization Hypothesis}:\\
+
+% Elite Polarization Hypothesis
+\noindent\textbf{Elite Polarization Hypothesis}: \textit{increases in elite polarization lead to increases in favorability toward the in-party and decreases in favorability towards the out-party}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% GRIDLOCK AS A DETERMINANT OF PARTY ATTITUDES
+\section{Gridlock as a Determinant of Party Attitudes}
+% Purpose of section: argue that gridlock should lead to decreases in both in-party and out-party favorability
+
+If my argument regarding the effects of elite polarization and attitudes about the parties is correct, we might expect a simple examination of favorability toward the parties over time to reveal upward movement partisans' favorability ratings of their own party and a downward movement in favorability ratings of the out-party. After all, this is the pattern observed in partisans' ratings of the in-party and out-party presidential candidates \parencite{iyengar2018strengthening}. And while measures of party favorability, such as the ANES feeling thermometers \parencite{iyengar2018strengthening}, do reveal gradual decreases in out-party favorability, in-party favorability appears surprisingly stable over time, even showing signs of decay in recent years. This is important because it seems to conflict with the large body of work arguing that -- by clarifying the differences between the parties -- elite polarization has led partisans in the mass public to rely more heavily upon their partisan identity as a driver of their political attitudes and behaviors \parencite{bartels2000partisanship,hetherington2001resurgent}.\footnote{There is even evidence to suggest that Independents have also been affected by elite polarization and the clarification of the differences between the parties. Independents of today are better able to distinguish the differences between the parties and are less likely to switch their votes across elections \parencite{smidt2017polarization}.} However, I provide a solution to this seeming contradiction by arguing that that the growth of gridlock in Congress has depressed partisans' evaluations of both parties. 
+
+
+%On the one hand, this could suggest that elite polarization does not lead to more favorable views of the in-party and less favorable views of the out-party as I have argued thus far. Alternatively, it may suggest that there is a previously unconsidered force that has simultaneously placed downward pressure on evaluations of the in-party as the parties have polarized. I believe that latter interpretation to be correct and that the previously unconsidered force is partisan gridlock in Congress.
+
+During the same time period in which elite polarization has steadily increased --- roughly 1960 through the present --- scholars have observed a similar increase in the level of gridlock in Congress \parencite{binder1999dynamics,binder2015dysfunctional}. That is, Congress has continuously gotten worse at addressing matters of national importance. \textcite{binder1999dynamics} identifies several possible sources of gridlock such as divided government, ideological differences between the House and Senate, and even elite polarization. Of course, it is easy to see how polarization might lead to gridlock: as partisan members of Congress move toward the ideological poles, it becomes more difficult to find common ground and pass important legislation. However, the relationship between elite polarization and gridlock remains debated. In a series of papers in \textit{Political Analysis}, \textcite{chiou2008comparing,chiou2008search} and \textcite{binder2008taking} discussed the sensitivity of \citeauthor{binder1999dynamics}'s (\citeyear{binder1999dynamics}) findings  to changes in the measurement of the independent variables.\footnote{My use of DW-NOMINATE scores, along with the fact that I make over time, but not cross-chamber, comparisons helps me avoid the measurement issues raised by \textcite{chiou2008comparing}.} The jury is still out on the relationship between elite polarization and gridlock, but the growth of gridlock over the last several decades is nevertheless undeniable. 
+
+Why, though, might increases in gridlock lead to lower evaluations of the parties? Here, I provide two answers to this question. First, partisans are generally averse to gridlock. While a handful of strong partisans may wish for their party to take a principled stand that could result in conflict and gridlock \parencite{harbridge2011electoral}, these individuals are the exception and not the rule, as most partisans would rather see Congress address the important issues of the day. For instance, \textcite{wolak2020compromise} shows that a large majority of partisans in the mass public, both Democrat and Republican, are generally favorable toward the idea of compromise and prefer politicians that say they are willing to do so. \textcite{flynn2016partisan} also shows that partisans prefer compromise to gridlock on issues with no consensus, while on consensus issues, partisans would rather see the out-party pass their preferred policy than see gridlock continue. This makes sense considering that partisans in the mass public do not generally hold strong and consistently partisan issue positions \parencite{hetherington2009putting}, but do have an interest in seeing Congress produce legislation to address national problems. 
+
+The second reason that gridlock may reduce evaluations of the parties is that gridlock often entails partisan incivility and conflict. For many individuals, the hostile nature of partisan politics can be off-putting, leading some individuals to purposefully avoid discussing politics \parencite{klar2016independent,klar2018affective}.\footnote{Part of \citeauthor{klar2016independent}'s (\citeyear{klar2016independent}) argument is that polarization leads some partisans to hide their partisan identity by claiming to be independent. I attempt to alleviate concerns about the rise of independents by noting here and in the \nameref{sec:datamethods} that I include party-leaning independents -- who may simply be ``undercover partisans" \parencite{klar2016independent} -- in my analysis. These ``leaners" are equally (if not more) knowledgable and interested in politics than ``weak" partisans \parencite{klar2018how}.} When partisan conflict occurs in Congress, many people respond by lowering their evaluations of the legislative branch \parencite{ramirez2009dynamics}. Given that the actions of partisan elites on both sides of the aisle are responsible for producing the uncivil and gridlocked Congress we observe today, cutting against the desire for compromise found among many individuals in the mass public \parencite{wolak2020compromise}, I believe that partisans are likely to respond to Congressional gridlock by lowering their evaluations of both parties. Together, these two reasons lead me to present the \textit{Gridlock Hypothesis}: \\
+
+% Gridlock Hypothesis
+\noindent\textbf{Gridlock Hypothesis}: \textit{increases in gridlock lead to decreases in favorability toward both the in-party and the out-party} \\
+
+So far, I have argued that one of the primary ways in which elite polarization has strengthened the psychological and social attachment that partisans have to their party is by making the distinctions between the parties more clear. This should make it easier for partisans to recognize which party they should like and which they should hate (hence the Elite Polarization Hypothesis). However, it may be the case that when elites become more polarized, it also becomes easier for partisans to assign responsibility for gridlock to the both parties. When partisan elites are relatively non-polarized, it may be difficult to tell who is responsible for gridlock in the legislative process. But, as the polarization clarifies the differences between the parties, partisans may view the parties as the source of gridlock if and when it occurs. This would imply that gridlock and elite polarization are interactively related, such that the power of gridlock to reduce partisans' favorability toward either party is strengthened when elite polarization is heightened. This represents my Partisan Gridlock Hypothesis: \\ 
+
+% Partisan Gridlock Hypothesis
+\noindent\textbf{Partisan Gridlock Hypothesis}: \textit{the negative effects of gridlock on in-party and out-party favorability will be strongest when elite polarization increases}
+ 
+ 
+ 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Arguably one of the most famous scholars of American politics, \textcite{key1955politics} canonically described three functions of political parties: (1) party-in-the-electorate, (2) party-as-organization, and (3) party-in-government \parencite[see also][]{aldrich2006political}
+
+% Transition in...
+%Although there is an expansive literature documenting the downstream effects of elite polarization on the attitudes of partisans in the mass public, it remains unclear why in-party favorability has remained relatively stable over the last several decades. As I have argued, increases in elite polarization should strengthen the social and psychological attachment to one's party, leading to more favorable views of one's own party, and less favorable views of the out-party. Why, then, have partisans not responded to the gradual increase in elite polarization with increasingly positive evaluations of their party?
+
+% Why should gridlock affect party favorability
+%The answer I propose is that, unlike evaluations of individual partisans, evaluations of the political parties are also a function of the parties' productivity in office. One of the various functions of political parties is, after all, is to pursue the party's policy goals in the halls of government \parencite{aldrich2006political}. 
+
+%During the period in which elite polarization has increased, gridlock has also increased. This means that Congress (both Democrats and Republicans) is failing to address salient issues. The cause of gridlock is somewhat mixed; some argue that elite polarization itself causes gridlock (Binder), while others argue that this relationship is unclear (Chiou and Rothenberg). Hethering and Rudolph (2016) have suggested that the increase in affective polarization leads members of the mass public to distrust the out-party, leading to stagnation in Washington. 
+
+%Two hypotheses follow directly from my argument regarding the effects of elite polarization and gridlock on attitudes towards the parties. First, I expect that, all else held constant, increases in elite polarization should increase in-party favorability, but decrease out-party favorability -- increased distinctions between the parties as a result of elite polarization should strengthen peoples' psychological and social attachment to the in-party, but generate antipathy for the out-party (\textit{Elite Polarization Hypothesis}). Second, I expect that, all else held constant, gridlock in Congress will reduce both in-party and out-party favorability -- the failure of partisan elites to address serious issues facing the nation produces disaffection among partisans in the mass public, who then respond with colder feelings for both parties (\textit{Gridlock Hypothesis}). Given the evidence that both elite polarization and gridlock have steadily increased in recent decades, their counter-vailing effects on in-party favorability could explain its relative stability. In the next section, I detail my empirical approach to testing these hypotheses. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% DATA AND METHODS
+\section{Data and Methods}\label{sec:datamethods}
+I will empirically evaluate my Elite Polarization and Gridlock hypotheses using a time-series analysis. My two primary explanatory variables (described in greater detail below) are measures of (1) elite polarization in either chamber of Congress and (2) Congressional gridlock. My two primary dependent variables (also described in greater detail below) are measures of (1) in-party favorability --- or Republicans (Democrats) attitudes towards the Republican (Democratic) Party ---  and (2) out-party favorability --- or Republicans (Democrats) attitudes towards the Democratic (Republican) Party.\footnote{Leaning-independents are coded as partisans in this analysis. This decision was motivated by the evidence that leaning independents tend to behave politically much like self-identified partisans \parencite{keith1992myth}, as well as the evidence that some partisans claim to be independent to avoid the social costs of publicly disclosing one's partisan identity \parencite{klar2016independent}.} All items are measured biennially, with each observation representing a particular Congress. The data range from the 95$^{\text{th}}$ Congress (1977-79) to the 114$^{\text{th}}$ Congress (2015-2016) for a total of 20 observations.
+
+
+%To measure elite polarization, I follow the approach of \textcite{hetherington2001resurgent} and calculate the mean Euclidean distance between the Democratic and Republican House caucuses in terms of their DW-NOMINATE scores \parencite{lewis2018voteview}.  To measure Congressional gridlock, I rely upon a measure from \textcite{binder1999dynamics}. This measure is said to capture how well each Congress has been able to address matters of national importance. The ``matters of national importance" are derived from a content analysis of daily unsigned editorial in the \textit{New York Times}, which is then compared with each Congress' track-record on addressing those issues.  
+
+\subsection{Measuring Party Favorability}
+One of the most commonly used data sources on party favorability is the American National Election Studies (ANES). Beginning in 1978, the ANES has asked respondents to rate the Democratic and Republican Parties using 101-point feeling thermometers, with 0 being the most negative attitude toward the party, 100 being the most positive attitudes, and 50 being neutral. In-party and out-party favorability is then calculated as the difference between individuals' ratings of their own party and the other party. Unfortunately, this measure is not available from the ANES in midterm years post-2000, meaning that the ANES data alone are insufficient to generate the necessary biennial measures of in-party and out-party favorability that are needed in this analysis. 
+
+\begin{table}[t!]
+	\caption{Surveys Used to Generate In- and Out-Party Favorability}\label{tab:surveys}
+	\centering
+\begin{tabular}{lcc}
+Survey Firm        & \# of Surveys & Loadings (In-Party/Out-Party) \\ \hline
+ANES               & 16            & .970/.990         \\
+Gallup             & 10            & .963/.980         \\
+Gallup2            & 5             & .543/.871         \\
+CBS                & 4             & .606/.784         \\
+CBS/New York Times & 8             & .871/.852         \\
+PSRA               & 3             & .668/.232         \\
+\hline
+\end{tabular}
+\end{table}
+
+To account for the inconsistencies in the ANES party favorability data, I utilize \citeauthor{stimson2018dyad}'s (\citeyear{stimson2018dyad}) dyad ratios algorithm which allows the researcher to combine measures from different survey outlets --- all of which are assumed to tap into the same latent attitude --- into a continuous time-series measure.\footnote{Scholars have previously applied this algorithm to generate various measures of political concepts such as policy mood \parencite{erikson2002macro,enns2008policy} and macro-interest \parencite{peterson2016macrointerest}.} The latent attitude that I am obviously interested in is partisans' attitudes towards their own party and the other party. Therefore, I rely upon the Roper Center's `iPoll' database to gather survey items that I believe are tapping into this latent attitude. I searched the database using words such as `favorable, `favorability,' and `party,' restricting my search to surveys where the full survey dataset was available.\footnote{Survey top-lines on party favorability are easily accessible from the Roper Center's iPoll database, but measuring in-party and out-party favorability requires that I know the party identification of each survey respondent. Therefore, for each survey containing a question on party favorability, I downloaded the entire dataset and parsed Republican (Democratic) attitudes towards the Republican (Democratic) and Republican (Democratic) attitudes towards the Democratic (Republican) Party.} 
+
+Table~\ref{tab:surveys} provides information on the survey items that were used in the algorithm, including the survey firm that conducted the survey, the number of surveys used from each firm, and the respective loadings on the in-party and out-party favorability measures. Question wording for each of the items that went into the algorithm can be found in Table~\ref{tab:surveyqs} of Appendix~\ref{app:surveys}.  The loadings from the generated in- and out-party favorability series given in Table~\ref{tab:surveys} represent the ``product moment correlations between the latent dimension estimates and the raw indicators," \parencite[][210]{stimson2018dyad}. Positive loadings indicate that the surveys from a particular firm move in the same direction as the latent series, while negative loadings indicate that surveys from a firm move in the opposite direction. This implies that the latent series produced from the algorithm more closely follow those surveys with the highest, positive loadings. The loadings of the ANES and Gallup series, for instance, are well above 0.9, indicating that they are highly influential in the construction of the latent series. On the other hand, the PSRA surveys do tend to move in the same direction as the latent series as indicated by its positive loadings, but the relatively small size of the loading indicates that the latent series does not follow the PSRA series as neatly. With this one exception, most series demonstrate fairly high and positive loadings, giving me confidence that the items I've collected are consistently tapping into the same latent attitudes --- in-party and out-party favorability --- and that their inclusion in the algorithm is appropriate. 
+
+% Party Favorability Plots
+\begin{figure}[tp!]
+\centering
+\vspace{0.5cm}
+\begin{subfigure}[b]{0.9\textwidth}
+   \includegraphics[width=0.9\linewidth]{Figures/LevelsFavorability.pdf}
+   \caption{Levels of In-Party and Out-Party Favorability, 1978-2016}\vspace{0.5cm}
+   \label{fig:favlevels} 
+\end{subfigure}
+\vspace{1cm}
+\begin{subfigure}[b]{0.9\textwidth}
+   \includegraphics[width=0.9\linewidth]{Figures/DifferencedFavorability.pdf}
+   \caption{Change in In-Party and Out-Party Favorability, 1980-2016}
+   \label{fig:favchanges}
+\end{subfigure}
+
+\caption{Plots of In-Party and Out-Party Favorability}\label{fig:fav}\vspace{1.5cm}
+\end{figure}
+%
+
+
+Figure~\ref{fig:fav} plots the measures of in-party and out-party favorability that I have generated with the dyad ratios algorithm (levels in \ref{fig:favlevels}, changes in \ref{fig:favchanges}). Given the rather high loadings from the ANES and Gallup surveys as indicated in Table~\ref{tab:surveys}, it is unsurprising that my generated measures of in-party and out-party favorability closely reflect the patterns found in the ANES and Gallup series (see Figure~\ref{fig:marginals} in Appendix~\ref{app:marginals}). It is easy to see from Figure~\ref{fig:favlevels} that out-party favorability (blue line) has trended downward from roughly 38 (on a 0-100 scale) in 1978 to roughly 22 in 2016. In-party favorability (red line), on the other hand, hovers near 80 in the early years of the series, but begins to creep downward over time, reaching a low of 74 in 2016. Both in-party and out-party favorability are slightly higher during years with presidential elections as compared to years with midterm elections, with in-party favorability being 0.4 points higher and out-party favorability being 0.1 points higher. 
+
+
+
+
+% GRIDLOCK
+\subsection{Measuring Congressional Gridlock}
+The measure of Congressional gridlock that I will use in my analyses comes from \textcite{binder1999dynamics}, who defines gridlock as ``the relative ability of the political system to reach legislative compromises that alter the status quo," \parencite[][523]{binder1999dynamics}. More substantively, Congress is considered to be gridlocked to the extent that it could have, but fails to, address politically important issues. \citeauthor{binder1999dynamics}'s (\citeyear{binder1999dynamics}) contribution is to propose a method of identifying the issues of national importance from unsigned editorials in the \textit{New York Times}, and then examining if Congress has passed legislation on those issues or not. Figure~\ref{fig:gridlock} plots the amount of gridlock over time, with the level of gridlock shown in \ref{fig:gridlocklevels} and Congress-to-Congress changes in gridlock shown in \ref{fig:gridlockchanges}. 
+
+ The justification for using unsigned editorials from the \textit{Times} as that the paper has long been considered the nation's ``paper of record," and thus any political issues raised in the editorials is an indication that the issue has reached some minimal threshold of public salience. While some may be concerned that the issues addressed in the unsigned editorials of the \textit{New York Times} may reflect the ideological biases of the paper's editorial team, \textcite{binder1999dynamics} attempts to quell these concerns by noting that her measure of gridlock considers not only those editorials that support a given piece of legislation, but also those that show opposition. Nevertheless, editorial teams of large newspaper such as the \textit{Times} are sensitive to the tastes of their readership, which means that certain issues may be purposefully omitted from the unsigned editorials. In future iterations of this project, I am thinking of constructing a new measure of gridlock that does not rely upon media coverage to identify the issues of national importance. One possibility is to consider Congress' ability to address the issues that voters see as the `most important problems' in our Country, as identified from survey responses based on nationally representative samples \parencite{heffington2019most}.
+ 
+
+% Gridlock Plots
+\begin{figure}[hp!]
+\centering
+\begin{subfigure}[b]{0.9\textwidth}
+   \includegraphics[width=0.9\linewidth]{Figures/LevelsGridlock.pdf}
+   \caption{Levels of Gridlock, 1978-2016}\vspace{0.5cm}
+   \label{fig:gridlocklevels} 
+\end{subfigure}
+\vspace{1cm}
+\begin{subfigure}[b]{0.9\textwidth}
+   \includegraphics[width=0.9\linewidth]{Figures/DifferencedGridlock.pdf}
+   \caption{Change in Pct. of Issues Gridlocked, 1980-2016}
+   \label{fig:gridlockchanges}
+\end{subfigure}
+
+\caption{Plots of Congressional Gridlock}\label{fig:gridlock}
+\end{figure}
+%
+
+
+% ELITE POLARIZATION
+\subsection{Measuring Elite Polarization}
+To measure elite polarization, I rely upon DW-NOMINATE scores from VoteView \parencite{lewis2018voteview}. DW-NOMINATE assigns an ideological score to each legislator in the United States Congress based on their roll-call voting history, with negative scores representing more liberal positions and positive scores representing more conservative positions. I operationalize elite polarization as the absolute difference between the median Republican and Democratic legislators, calculated separately for the House of Representatives and Senate. Calculating elite polarization using DW-NOMINATE scores is common practice in the American politics literature \parencite[e.g.,][]{banda2018elite,hetherington2001resurgent}. Note that the elite polarization scores have no inherent meaning, so in my interpretation of the models presented in the following section, I provide substantive interpretation of effect sizes where appropriate. Plots of my measure of elite polarization are provided in Figure~\ref{fig:pol} (levels in \ref{fig:pollevels}, changes in \ref{fig:polchanges}). The degree of polarization increases steadily in both the House of Representatives (red line) and the Senate (blue line), though the House of Representatives tends to be the most polarized chamber of Congress. 
+
+% Elite Polarization Plots
+\begin{figure}[hp!]
+\centering
+\begin{subfigure}[b]{0.9\textwidth}
+   \includegraphics[width=0.9\linewidth]{Figures/LevelsPolarization.pdf}
+   \caption{Levels of Elite Polarization, 1978-2016}\vspace{0.5cm}
+   \label{fig:pollevels} 
+\end{subfigure}
+\vspace{1cm}
+\begin{subfigure}[b]{0.9\textwidth}
+   \includegraphics[width=0.9\linewidth]{Figures/DifferencedPolarization.pdf}
+   \caption{Change in Elite Polarization, 1980-2016}
+   \label{fig:polchanges}
+\end{subfigure}
+
+\caption{Plots of Elite Polarization}\label{fig:pol}
+\end{figure}
+%
+
+% CONTROLS
+\subsection{Controls}
+With only 20 observations (19 when using differenced variables), I am unfortunately unable to include an extensive battery of control variables. Nevertheless, I do consider three variables that may confound the relationship between either of my primary explanatory variables (i.e., elite polarization and gridlock) and my measures of in- and out-party favorability. First, I include an indicator for divided government, as Congress' ability to pass legislation may be hampered (facilitated) by a divided (unified) government. Second, I include the change in the percent of strong partisans, as partisans in Congress may alter their calculus of electoral risk when they observe mass partisans becoming increasingly dedicated to their party \parencite{harbridge2011electoral}. Finally, I consider the effects of GDP growth, as more positive (negative) changes in growth may lead partisans to reward (punish) either or both parties. However, I find that including the change in GDP variable in the full models has little impact on the conclusions that I draw, so the full models that I present in the \nameref{sec:results} section only include controls for divided government and the change in the percent of strong partisans. Models that include GDP growth are presented in Tables~\ref{tab:housemods:gdp} and \ref{tab:senatemods:gdp} in Appendix~\ref{app:gdpmods}. 
+
+
+
+
+
+\subsection{Modeling Strategy}
+In the following section, I estimate and present the results from a series of seemingly unrelated regressions (SUR). The SUR approach is beneficial in that it accounts for the possibility of correlation in error terms across regression models. Given that people's attitudes towards the in- and out-parties may be jointly determined, the SUR is the optimal modeling strategy. 
+
+When modeling time-series data, researchers often begin by testing for stationarity in their variables. With only 20 observations, however, unit-root tests such as the augmented Dickey-Fuller or Phillips-Perron will be underpowered \parencite{pickup2014introduction}. To account for the possibility of non-stationarity, I first difference my dependent variables (in-party/out-party favorability), my primary explanatory variables (elite polarization and Congressional gridlock), as well as the controls for GDP and the percent of strong partisans. The indicator for divided government remains in its original form. The model that I then estimate to test my Elite Polarization and Gridlock Hypotheses is shown in Equation~\ref{mod}:
+
+\begin{align}\label{mod}
+	\Delta Y_{i,t} = \beta_{i,0} + \beta_{i,1}  \Delta Elite Pol._{i,t} + \beta_{i,2} \Delta Cong. Gridlock_{i,t} + \beta_{i,j} \mathbf{X}_{i,t,j} + \epsilon_{t}
+\end{align}
+
+with $i \in \{1,2\}$ indexing the individual regressions that comprise the SUR and $t$ indexing time; $\Delta Y_{i,t}$ representing the differenced measure of in-party ($i=1$) and out-party ($i=2$) favorability; $\beta_{i,1}$ representing the effects of a Congress-to-Congress change in elite polarization in each of the $i$ regressions of the SUR; $\beta_{i,2}$ representing the effect of the change in Congressional gridlock; and $\beta_{i,j}$ representing the effects of each of the $j \in \{3,\ldots, k\}$ control, with $k$ being the total number of control variables. The Elite Polarization and Gridlock Hypotheses can be tested by assessing the statistical and substantive significance of $\beta_{i,1}$ and $\beta_{i,2}$, respectively.\footnote{Given the mixed evidence that elite polarization and gridlock may be related \parencite{binder1999dynamics}, there may be concerns that elite polarization and gridlock show a high degree of multicollinearity, inflating the standard errors of my models. While polarization in the House and Senate are moderately correlated with gridlock in levels ($R \approx 0.5$), I use the first difference of my primary variables in empirical analysis, which produces only a small correlation between House polarization and gridlock ($R = 0.5$), and a negative but moderately sized correlation between Senate polarization and gridlock ($R = 0.41$). This might suggest some inflationary effect on the standard errors in the Senate models, but not so much in the House models.}
+
+Testing my Partisan Gridlock Hypothesis requires the addition of an interaction term ($\beta_{i,3}$) to my model, so that I can determine if the negative effects of gridlock on in-party and out-party favorability are stronger when elites become more polarized. This corresponds to an examination of the marginal effects of gridlock on in- and out-party favorability at various levels of polarization ($\beta_{i,2} + \beta_{i,3}\times \Delta ElitePol.$). The model with the included interaction term is given in Equation~\ref{mod2}:
+
+\begin{equation}\label{mod2}
+\begin{split}
+		\Delta Y_{i,t} = & \beta_{i,0} + \beta_{i,1} \Delta Elite Pol._{i,t} + \beta_{i,2} \Delta Cong. Gridlock_{i,t} \\
+		& + \beta_{i,3}\Delta Elite Pol._{i,t} \times \Delta Cong. Gridlock_{i,t} +\beta_{i,j} \mathbf{X}_{i,t,j} + \epsilon_{t}
+\end{split}
+\end{equation}
+
+Given that I have separate measures of polarization in the House of Representatives and Senate, I begin by estimating the SURs with the House measure of polarization and then follow up with an SUR using the Senate measure. I do not have \textit{a priori} expectations about the effects of polarization in the House as compared to the Senate, but given that polarization has progressed at a faster pace (Figure~\ref{fig:pollevels}) and appears more volatile in the House of Representatives (Figure~\ref{fig:polchanges}), it is possible that public is more responsive to polarization in the House. 
+
+Before proceeding to the results of my empirical analysis, it is important to be transparent about the potential limitations of my methodological approach. The most obvious limitation is that I am confined to a rather small number of observations and, as a result, including a broad ranges of controls in my models will quickly expend their explanatory power. Therefore, I first present a simple model with only the elite polarization and Congressional gridlock measures as explanatory variables, and subsequently present models that include the full set of controls and the interaction term. An additional limitation is that using Congress-to-Congress changes in elite polarization and gridlock may not map perfectly onto my theory. Individuals' attitudes towards the in- and out-party are likely to fluctuate at a shorter time-scale than the biennial level, and may demonstrate both short and long term reactions to elite polarization and gridlock.\footnote{This seems to suggest that an Error Correction Model with quarterly or annual data would be the most ideal modeling strategy given my theory. The data that I am in the process of collecting will allow me to perform these analyses.} Nevertheless, the data that are available for the present analysis allow me to take the initial step of establishing some connection between gridlock, elite polarization, and attitudes about the parties. 
+
+
+ %Both of these limitations suggest that my methodological approach provides a conservative test of my hypotheses, and any significant findings that I uncover should be considered more than suggestive than definitive, and are certainly not causally-identified. I have already begun collecting the data necessary to produce annual, or perhaps even quarterly, measures of my independent and dependent variables. Future iterations of this paper are sure to make advancements on the methodological front. 
+
+%I generate this measure using  The backbone of this measure comes from the American National Election Study's (ANES) feeling thermometer ratings of the two major parties. These measures ask respondents to rate the Democratic and Republican parties on scales that range from 0 to 100, with 0 being the most negative feelings, and 100 being the most positive feelings, towards the parties. This measure is not available from the ANES in midterm years post-2000, so I supplement this measure with additional measures of party favorability from sources such as Gallup, Pew Research Center, CBS News, etc. These are made available through Roper's iPoll database. Given the small number of observations I cannot add many control variables before my degrees of freedom are diminished completely, but some of the control that I will consider are \textit{percent of strong partisans}, \textit{divided government}, and economic indicators such as \textit{GDP growth}. 
+
+%The American National Election Study has routinely included ``feeling thermometers" in their survey to capture the public's attitudes towards the two major parties. These measures ask respondents to separately rate the Democratic and Republican Parties on scales that range from 0 to 100, with 0 being the most negative feelings, and 100 being the most positive feelings, towards the respective party. In-party favorability, then, reflects Republican (Democratic) respondents mean rating on the feeling thermometer for the Republican (Democratic) Party, while out-party favorability reflects Republican (Democratic) respondents mean rating on the feeling thermometer for the Democratic (Republican) Party.
+
+%While this measure is available from the ANES during all midterm and presidential election years between 1978 and 2000, it is unfortunately only available in presidential election years post-2000. Therefore, I rely upon \citeauthor{stimson2018dyad}'s (\citeyear{stimson2018dyad}) dyad ratios algorithm to generate a complete biennial measure of in- and out-party favorability. The dyad ratios algorithm allows the researcher to combine measures from different survey outlets --- all of which are to assumed to tap into the same latent attitude --- into a single time-series measure
+
+
+
+\section{Results}\label{sec:results}
+I begin by examining the effects of elite polarization on in- and out-party favorability (the Elite Polarization Hypothesis). Tables~\ref{tab:housemods} and \ref{tab:senatemods} both show three sets of seemingly unrelated regressions, with a simple model estimated in Columns 1-2, a more extensive additive model that includes the full set of controls shown in Columns 3-4, and model with includes the controls and an interaction between elite polarization and gridlock shown in Columns 5-6. Table~\ref{tab:housemods} uses the House of Representatives measure of elite polarization while Table~\ref{tab:senatemods} uses the Senate measure. Given that the variables are measured on different scales, readers should be cautious to not judge effect sizes from the coefficients in the regression tables; substantive interpretation of effects sizes is given in-text where applicable. I use one-tailed hypothesis tests to determine statistical significance as my Elite Polarization and Gridlock hypotheses are directional in their expectations.
+
+Looking first at the simple models in Columns 1 and 2 of Tables~\ref{tab:housemods}, we see that the coefficient on change in polarization in the U.S. House of Representatives has a positive effect on in-party favorability ($\hat{\beta} = 40.275$, $p < 0.10$) and a negative effect on out-party favorability ($\hat{\beta} = -16.522$, $p = 0.22$) as anticipated by the Elite Polarization Hypothesis. However, this effect is only statistically significant in the in-party model. When controls are added (Columns 3 and 4), the signs of the coefficient on House polarization remain in their expected direction for both the in-party ($\hat{\beta} = 7.675$) and out-party ($\hat{\beta} = -40.622$) models, but the effect of polarization on the in-party has lost its statistical significance, while the out-party measure has now reached significance at $p < 0.05$. To get an idea of the substantive significance of the House polarization variable, consider that a typical change in House polarization -- defined here as the mean of the absolute value of $\Delta$House Polarization -- is 0.018 units.\footnote{Here and throughout the \nameref{sec:results} section, I use the mean absolute value to represent a `typical' change. Given that I use the first difference for most of my variables of interest, the mean absolute value gives the magnitude of the average change, be it positive or negative.} This is roughly the size of the change in polarization experienced by the House of Representatives between the 97$^{\text{th}}$ (1981-1983) and 98$^{\text{th}}$ (1983-1985) Congresses. A change in House polarization of this size is expected to produce a 0.739 unit positive change ($\approx$ 0.31 std. deviations) in in-party favorability from the simple model, and a 0.745 unit negative change ($\approx$ 0.34 std. deviations) in out-party favorability from the full model. Given that the typical change in in-party favorability is roughly 1.88 units, and the typical change in out-party favorability is 1.77 units, this implies that a typical change in House polarization accounts for roughly 40\% and 42\% of the typical change in in- and out-party favorability, respectively. 
+
+% HOUSE POLARIZATION W/O GDP
+\begin{table}[!tp] \centering 
+  \caption{Effects of House Polarization and Gridlock on Party Favorability}
+  \label{tab:housemods} 
+  \vspace*{-0.1cm}
+  \renewcommand{\arraystretch}{0.7}
+\begin{adjustbox}{width=\textwidth,center}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+	\\[-1.8ex]
+	\hline\hline \\[-1.8ex] 
+	\\[-1ex] 
+& \multicolumn{2}{c}{SUR} & \multicolumn{2}{c}{SUR} & \multicolumn{2}{c}{SUR}  \\\cline{2-3} \cline{4-5} \cline{6-7} \\[-1ex]
+& In-Party & Out-Party & In-Party & Out-Party & In-Party & Out-Party \\[0.5ex]
+\hline \\[-1ex] 
+  $\Delta$House Polarization & 40.275*  & -16.522  & 7.675    & -40.622** & 21.874 & -43.129** \\
+  & (24.760) & (20.975) & (22.068) & (18.599) & (22.770) & (20.903) \\
+  & & & & & & \\
+  $\Delta$Gridlock & -0.005   & -0.066** & -0.032   & -0.075*** & -0.000 & -0.081*** \\
+  & (0.032)  & (0.027)  & (0.031)  & (0.027) & (0.032) & (0.030)  \\
+  & & & & & & \\ 
+  $\Delta$Gridlock $\times$ &   &  &  &  & -1.734* & 0.306 \\
+  $\Delta$House Polarization &   &  &  &  & (1.089) & (1.000)  \\
+  & & & & & & \\ 
+ Divided Government &  &  & -0.484   & 1.693**  & -0.318 & 1.663** \\
+  & & & (1.005)  & (0.847)  & (0.959) & (0.881) \\
+  & & & & & & \\ 
+ $\Delta$Pct. Strong Partisans &  &  & 0.645*** & 0.363**  & 0.685*** & 0.356** \\
+  & & & (0.193)  & (0.163)  & (0.185) & (0.170) \\
+  & & & & & & \\   
+ Constant & -0.967*   & -0.465   & -0.555   & -1.600* & -0.915 & -1.536* \\
+  & (0.665)  & (0.563)  & (0.880)  & (0.742)  & (0.866) & (0.795) \\
+  & & & & & &\\ 
+\hline \\[-1.8ex] 
+Observations & 19 & 19 & 19 & 19 & 19 & 19 \\ 
+Adj. R$^2$ & 0.03 & 0.21 & 0.39 & 0.51 & 0.45 & 0.47 \\
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{7}{l}{\footnotesize $^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01; one-tailed tests} \\ 
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses} \\
+\end{tabular} 
+\end{adjustbox}
+\end{table}
+
+% SENATE POLARIZATION W/O GDP
+\begin{table}[!tp]
+	\caption{Effects of Senate Polarization and Gridlock on Party Favorability}
+	\label{tab:senatemods}  
+	\vspace*{-0.1cm}
+	\renewcommand{\arraystretch}{0.7}
+\begin{adjustbox}{width=\textwidth,center}
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+	\\[-1.8ex]
+	\hline\hline \\[-1.8ex] 
+	\\[-1ex] 
+& \multicolumn{2}{c}{SUR} & \multicolumn{2}{c}{SUR} & \multicolumn{2}{c}{SUR} \\\cline{2-3} \cline{4-5} \cline{6-7} \\[-1ex]
+& In-Party & Out-Party & In-Party & Out-Party & In-Party & Out-Party \\[0.5ex]
+\hline \\[-1ex] 
+  $\Delta$Senate Polarization & -28.880  & -52.605** & -17.806  & -50.697** & -18.042 & -57.112** \\
+  & (36.079) & (26.326)  & (26.995) & (22.933)  & (29.659) & (24.607)\\
+  & & & & & & \\
+  $\Delta$Gridlock & 0.015    & -0.090*** & -0.040*  & -0.090*** & -0.040 & -0.102*** \\
+  & (0.037)  & (0.027)   & (0.028)  & (0.024)  & (0.034) & (0.028) \\
+  & & & & & & \\ 
+  $\Delta$Gridlock $\times$ &   &  &  &  & 0.056 & 1.520 \\
+  $\Delta$House Polarization &   &  &  &  & (2.307) & (1.914)  \\
+  & & & & & & \\ 
+ Divided Government &  &  & -0.442   & 1.724*  & -0.463 & 1.159 \\
+  & & & (0.994)  & (0.845) & (1.342) & (1.114) \\
+  & & & & & & \\ 
+ $\Delta$Pct. Strong Partisans &  &  & 0.662*** & 0.174 & 0.662*** & 0.199  \\
+  & & & (0.172)  & (0.147)  & (0.183) & (0.152) \\
+  & & & & & & \\   
+ Constant & -0.064   & -0.245    & -0.314   & -1.669*  & -0.291 & -1.041 \\
+  & (0.656)  & (0.479)   & (0.860)  & (0.730) & (1.305) & (1.083)  \\
+  & & & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 19 & 19 & 19 & 19 & 19 & 19 \\ 
+Adj. R$^2$ & -0.08 & 0.35 & 0.40 & 0.51 & 0.36 & 0.50 \\
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{7}{l}{\footnotesize $^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01; one-tailed tests} \\ 
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses} \\
+\end{tabular}
+\end{adjustbox}
+\end{table} 
+
+
+The effects of elite polarization in the Senate (Table~\ref{tab:senatemods}) tell a slightly different story. Both the simple (Column 1) and full (Column 3) models show elite polarization having an unexpected negative effect on in-party favorability, though neither of these estimates is statistically distinguishable from zero. The simple (Column 2) and full (Column 4) models of out-party favorability, on the other hand, perform closer to my expectations, with Senate polarization having a negative effect and statistically significant effect on out-party favorability in both the simple ($\hat{\beta} = -52.605$, $p < 0.05$) and full ($\hat{\beta}=-50.697$, $p<0.05$) models in Columns 2 and 4, respectively. To put this into context, under the full model specification, a typical change in Senate polarization of 0.0159 units -- roughly the change in polarization observed in the Senate between the 112$^{\text{th}}$ (2011-2013) and 113$^{\text{th}}$ (2013-2015) Congresses -- produces a 0.808 unit negative change in out-party favorability ($\approx$ 0.36 std. deviations). Given that the typical change in out-party favorability is 1.77 units in magnitude, this implies that a typical change in Senate polarization can account for roughly 46\% of the typical change in out-party favorability. 
+
+In summary, I have found that elite polarization increased in-party favorability using the House measure, though the statistical significance of this effect is sensitive to model specification. No such effects on in-party favorability were found using the Senate measure of polarization. As anticipated by the Elite Polarization Hypothesis, I find that polarization consistently leads to a reduction in out-party favorability, regardless of the measurement of polarization that I use. These effects are significant in all but the simple model with the House polarization measure. 
+
+My next task is to assess the effects of Congressional gridlock on in-party and out-party favorability. As a reminder, my Gridlock Hypothesis states that gridlock should reduce favorability toward both parties. Also note that my measure of gridlock assesses Congress as a whole, and is thus the exact same variable in Tables~\ref{tab:housemods} and \ref{tab:senatemods}, the only difference between the tables being the measure of elite polarization (House or Senate). Looking first at Table~\ref{tab:housemods}, we see that the gridlock has a negative effect on both in-party and out-party favorability, whether controls are included (Columns 3-4) or not (Columns 1-2). However, the negative effect of gridlock only reaches statistical significance in the out-party models ($\hat{\beta} = -0.066$, $p < 0.05$ in the simple model; $\hat{\beta} = -0.075$, $p < 0.01$ in the full model). Substantively, the full model suggests that a typical change in gridlock of 13.94 units -- roughly the change in gridlock observed between the 105$^{\text{th}}$ (1997-1999) and 106$^{\text{th}}$ (1999-2001) Congresses -- produces a 1.047 unit negative change in out-party favorability ($\approx$ 0.47 std. deviations). This suggests that at typical change in gridlock can account for 60\% of the typical change in out-party favorability. This initial set of models provides suggestive evidence of the negative impacts of gridlock on out-party attitudes, but gridlock's effect on in-party attitudes is not fully substantiated.
+
+Table~\ref{tab:senatemods} again tests the effect of gridlock on in- and out-party favorability, but these models include the Senate measure of polarization. In the simple model, we see that gridlock continues have a negative and statistically significant effect on out-party attitudes ($\hat{\beta} = -0.090$, $p<0.01$) as anticipated by the Gridlock Hypothesis, though the effect size is slightly larger in these models compared to those in Table~\ref{tab:housemods}. The effect of gridlock on in-party attitudes in the simple model appears incorrectly signed (positive) but statistically indistinguishable from zero. Moving over to the full model in Columns 3 and 4 of Table~\ref{tab:senatemods}, however, gridlock now appears to have a negative and statistically significant effect on both in-party ($\hat{\beta}= -0.040$, $p<0.1$) and out-party ($\hat{\beta} = -0.090$, $p<0.01$) favorability, though the effect appears to be stronger in the latter case. In substantive terms, we should expect that a typical change in gridlock of 13.94 units would produce a 0.55 unit negative change in in-party favorability ($\approx$ 0.23 std. deviations), and a 1.26 unit negative change in out-party favorability ($\approx$ 0.57 std. deviations). 
+
+To summarize my tests of the Gridlock Hypothesis, I have found that the gridlock has a consistent, negative relationship with out-party favorability. The evidence in favor of gridlock's negative impact on in-party favorability is more mixed --- the coefficient on gridlock is in the expected direction (negative) in three out of the four sets of seemingly unrelated regressions, but this effect only reaches statistical significance in the model with the full set of controls where the measure of elite polarization comes from the Senate (Columns 3 of Table~\ref{tab:senatemods}). I conclude that I have suggestive (albeit mixed) evidence in favor of the Gridlock Hypothesis.
+
+
+%    \begin{figure*}
+%        \centering
+%        \begin{subfigure}[b]{0.48\textwidth}
+%            \centering
+%            \includegraphics[width=\textwidth]{Figures/ME-Gridlock-InParty-House.pdf}
+%            \caption[In-Party, House Polarization]%
+%            {{\small In-Party, House Polarization}}    
+%            \label{fig:in-house}
+%        \end{subfigure}
+%        \hfill
+%        \begin{subfigure}[b]{0.48\textwidth}  
+%            \centering 
+%            \includegraphics[width=\textwidth]{Figures/ME-Gridlock-OutParty-House.pdf}
+%            \caption[Out-Party, House Polarization]%
+%            {{\small Out-Party, House Polarization}}    
+%            \label{fig:out-house}
+%        \end{subfigure}
+%        \vskip\baselineskip
+%        \begin{subfigure}[b]{0.48\textwidth}   
+%            \centering 
+%            \includegraphics[width=\textwidth]{Figures/ME-Gridlock-InParty-Senate.pdf}
+%            \caption[]%
+%            {{\small In-Party, Senate Polarization}}    
+%            \label{fig:in-sen}
+%        \end{subfigure}
+%        \hfill
+%        \begin{subfigure}[b]{0.48\textwidth}   
+%            \centering 
+%            \includegraphics[width=\textwidth]{Figures/ME-Gridlock-OutParty-Senate.pdf}
+%            \caption[Out-Party, Senate Polarization]%
+%            {{\small Out-Party, Senate Polarization}}    
+%            \label{fig:out-sen}
+%        \end{subfigure}
+%        \caption[Marginal Effects of $\Delta$Gridlock on $\Delta$In/Out-Party Favorability]
+%        {\small Marginal Effects of $\Delta$Gridlock on $\Delta$In/Out-Party Favorability} 
+%        \label{fig:margeffs}
+%    \end{figure*}
+    
+
+
+
+My final exercise is to examine if the negative effects of increased gridlock are exacerbated when elite polarization has also increased. As noted in the \nameref{sec:datamethods} section, this implies that there is an interactive relationship between elite polarization and gridlock. I estimate the interactive model specified in Equation~\ref{mod2}, with the results produced in the rightmost columns of Tables~\ref{tab:housemods} and \ref{tab:senatemods}. Given my Partisan Gridlock Hypothesis, I expect to see a negative and statistically significant interaction term in both the in- and out-party models.
+
+    \begin{figure}[!tp]
+    	\centering
+    	\includegraphics[width=0.7\linewidth]{Figures/ME-Gridlock-InParty-House}
+    	\caption{Marginal Effects of $\Delta$Gridlock on $\Delta$In-Party Favorability, as $\Delta$Elite Polarization Varies}\label{fig:margeff-inparty}
+    	\vspace{-0.5cm}
+    	{\footnotesize \textit{Note}: Estimates from Column 5 of Table~\ref{tab:housemods}, 90\% Confidence Intervals shown}
+    \end{figure}
+
+Looking first at the interaction between gridlock and the House measure of polarization shown in Table~\ref{tab:housemods}, we see that interactive term is negative and statistically significant in the in-party model ($\hat{\beta} = -1.734$, $p<0.10$), as expected. In other words, the size of the negative effect of gridlock on in-party favorability depends meaningfully upon the size of the change in elite polarization. Notice, however, that the gridlock constitutive term -- which represents the effect of gridlock when elite polarization does not change (i.e., $\Delta$ Elite Polarization = 0) -- is negative but statistically insignificant. Therefore, to determine that values of elite polarization at which gridlock induces meaningful negative changes on in-party favorability, I plot the marginal effects of gridlock in Figure~\ref{fig:margeff-inparty}, along with 90\% confidence intervals. From this, we see that when elite polarization undergoes small changes ($\Delta$Elite Polarization $\in$[-0.02,0.02]), changes in gridlock have no meaningful effect on in-party favorability. However, when elite polarization undergoes larger changes ($\Delta$Elite Polarization $>$ 0.02), changes in gridlock produces statistically significant reductions in-party favorability. Consistent with my Partisan Gridlock Hypothesis, this suggests that the negative effects of gridlock on in-party favorability are more severe when elites in the House of Representatives become increasingly polarized, however, the same does not appear to be true of out-party attitudes. 
+
+I move next to examining whether the interactive effects of gridlock and elite polarization persist when polarization is measured in the Senate. These interactive models are shown in the rightmost columns of Table~\ref{tab:senatemods}. In contrast to the models with the House measure of polarization, the models with the Senate measure show no such interaction between gridlock and elite polarization. The interactive terms in both the in-party and out-party models are incorrectly signed (positive), but statistically indistinguishable from zero. This is to say that the effects of elite polarization and gridlock do not depend meaningfully upon one another when the Senate measure of polarization is employed. It is worth noting that the constitutive term for gridlock -- which represents the effect of a change in gridlock when the change in elite polarization is zero -- remains negative in both the in-party and out-party models, though it just misses statistical significance in the in-party model. The constitutive term for polarization remains negative and statistically significant in the out-party model. However, given that these models do not reveal a significant interaction between elite polarization and gridlock, the additive models presented in Columns 3 and 4 of Table~\ref{tab:senatemods} are likely a more appropriate fit for the data. 
+
+Tests of my Partisan Gridlock Hypothesis reveal only partial support. Heightened elite polarization does appear to exacerbate the negative effects of gridlock on in-party favorability, but only when the House measure of polarization is used. No such effects on in-party favorability are found using the Senate measure. With respect to the interactive effects of elite polarization and gridlock on out-party favorability, I find no significant effects regardless of the chamber in which elite polarization is measured. To be fair, I've stretched my data quite far by fitting a model with six explanatory variables (including the constant) but only 19 observations. This is a part of my analysis that will benefit tremendously from the collection of additional data. 
+
+
+
+\section{Conclusion}
+As partisan elites in Congress have grown apart over the last several decades, the power of partisanship as a predictor of the attitudes and behaviors of partisans in the mass public has grown steadily. At the same time, partisans do not appear to hold their party in higher regard today than they did in less polarized eras of American politics. I have helped to square this seeming contradiction by showing that the relationship between elite polarization and partisans' attitudes toward the parties is more complex than previously believed. Elite polarization appears to be related to both increases in in-party favorability and decreases in out-party favorability, though the in-party effects appear to stem primarily from polarization in the House of Representatives. This suggests that when the differences between the parties at the elite level are clear, partisans know not only who to vote for \parencite{bartels2000partisanship}, but they also know who they should like and dislike. At the same time, evaluations of the parties appear to be partially influenced by the degree of gridlock in Congress. As one of the most prominent actors in the legislative branch, parties are looked upon unfavorably by partisans in the mass public when issues of national importance are not addressed. There also appears to be an interactive relationship such that the negative effects of gridlocks on in-party favorability are further exacerbated when the elites become more polarized. So while elite polarization may help inform voters about either parties issue positions, it also appears to expose the in-party as one of the actors responsible for gridlock.
+
+There are two implications from this analysis that are important to consider. The first implication is that, to the extent that partisan elites remain polarized and Congress remains gridlocked, partisans' will likely continue to hold only mildly favorable opinions of their own party and rather unfavorable opinions of the out-party. It is no doubt easier to feel closer to your party and more distant from the other party when you know what either party represents, but this does not eliminate voters' expectation that their party and its representatives will deliver on their promises. It seems unlikely that elites will be able to maintain their historically high levels of polarization while also finding a way to compromise on the wide range of issues that partisans in the mass public care about. Relatedly, the second implication of my analysis is that parties appear to face conflicting pressures when they try to stake out issue positions and legislate simultaneously. On the one hand, parties must try to distinguish themselves from other parties by making their issue positions known to voters. On the other hand, by publicly taking a side on certain issues, parties may be reluctant to compromise on those issues in fear of voter retaliation (whether that fear is justified or not). Moving forward, it seems to follow that parties would be best served if their elites in Congress would clearly state their issue positions, while also signaling a willingness to compromise -- this would keep the information environment clear for voters, while (hopefully) diminishing politicians' beliefs that they need to take principled stands that result in gridlock. 
+
+ Thinking about the future of this project, the next step is to gather more data to extend the analysis. I made clear the potential limitations of my empirical strategy in the \nameref{sec:datamethods} section, but these limitations may be eased with more fine-grained measures of elite polarization, gridlock, and in-party/out-party favorability. Additional data would also allow me to model more complex dynamics and control for a wider range of potential confounders.
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     %%%% BIBLIOGRAPHY %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\printbibliography
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       %%%% APPENDIX %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TITLE PAGE
+\clearpage
+\appendix
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{Gridlock, Elite Polarization, and Attitudes About the Parties}\\
+      \large Online Appendix \\
+      \large\textit{Maxwell B. Allamong}
+   \end{center}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
+
+
+
+\begin{appendices}
+\begin{refsection}
+
+
+\section{Party Favorability Survey Questions}\label{app:surveys}
+
+\begin{table}[h!]
+    \caption{Party Favorability Sources and Questions}\label{tab:surveyqs}
+    \centering
+  	\resizebox{\textwidth}{!}{
+	\begin{tabular}{lll}\hline
+ANES & \multicolumn{2}{l}{We'd also like to get your feelings about some groups in American society. When I read}\\
+& \multicolumn{2}{l}{the name of a group, we'd like you to rate it with what we call a feeling thermometer.} \\ 
+& \multicolumn{2}{l}{Ratings between 50-100 degrees mean that you feel favorably and warm toward the group;} \\
+& \multicolumn{2}{l}{ratings between 0 and 50 degrees mean that you don't feel favorably towards the group and} \\
+& \multicolumn{2}{l}{that you don't care too much for that group. If you don't feel particularly warm or} \\
+& \multicolumn{2}{l}{cold toward a group you would rate them at 50 degrees. If we come to a group you don't} \\
+& \multicolumn{2}{l}{know much about, just tell me and we'll move on to the next one.} \\
+& & \\
+Gallup & \multicolumn{2}{l}{Next, we'd like to get your overall opinion of some people in the news. As I read } \\
+& \multicolumn{2}{l}{each name, please say if you have a favorable or unfavorable opinion of these people -- } \\
+& \multicolumn{2}{l}{or if you have never heard of them. How about: The Republican (Democratic) Party?} \\
+& & \\
+Gallup2 & \multicolumn{2}{l}{Next, I'd like you to rate the political parties on a scale. If you have a favorable} \\
+& \multicolumn{2}{l}{opinion of the party, name a number between plus on and plus five -- the higher the} \\
+& \multicolumn{2}{l}{number, the more favorable your opinion. If you have an unfavorable opinion of the party,} \\
+& \multicolumn{2}{l}{name a number between minus one and minus five -- the higher the number the more} \\
+& \multicolumn{2}{l}{unfavorable your opinion. First, how would you rate the Republican (Democratic) Party...} \\
+& \multicolumn{2}{l}{Next, how would you rate the Democratic (Republican) Party...} \\
+& & \\
+CBS & \multicolumn{2}{l}{(In general), is your opinion of the Republican (Democratic) Party favorable or not favorable?} \\
+& & \\
+CBS/New York Times & \multicolumn{2}{l}{(In general), is your opinion of the Republican (Democratic) Party favorable or not favorable?} \\
+& & \\
+PSRA & \multicolumn{2}{l}{Now I'd like your views on some people and things in the news. As I read from a list,} \\
+& \multicolumn{2}{l}{please tell me which category best describes your overall opinion of who or what I name.} \\
+& \multicolumn{2}{l}{First, would you say your overall opinion of the Republican (Democratic) Party is very} \\
+& \multicolumn{2}{l}{favorable, mostly favorable, mostly unfavorable, or very unfavorable?} \\
+\hline
+		\end{tabular}}
+\end{table}
+\clearpage
+
+
+
+
+
+
+
+
+\section{Models w/ GDP Growth}\label{app:gdpmods}
+
+% HOUSE POLARIZATION W/ GDP
+\begin{table}[!h] \centering 
+  \caption{Effects of House Polarization and Gridlock on Party Favorability}\vspace*{-0.1cm}
+  \label{tab:housemods:gdp} 
+    \renewcommand{\arraystretch}{0.7}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+\\[-1ex] 
+& \multicolumn{2}{c}{SUR} & \multicolumn{2}{c}{SUR}  \\\cline{2-3} \cline{4-5} \\[-1ex]
+& In-Party & Out-Party & In-Party & Out-Party \\[0.5ex]
+%& (1) & (2) & (3) & (4)\\
+\hline \\[-1ex] 
+  $\Delta$House Polarization & 40.275*  & -16.522  & 34.123   & -54.801*  \\
+  & (24.760) & (20.975) & (33.407) & (33.008)  \\
+  & & & & \\
+  $\Delta$Gridlock & -0.005   & -0.066** & -0.126   & -0.101*** \\
+  & (0.032)  & (0.027)  & (0.029)  & (0.029)   \\
+  & & & & \\ 
+ Divided Government &  &  & 0.812    & 0.676     \\
+  & & & (1.223)  & (1.208)   \\
+  & & & & \\ 
+ $\Delta$Pct. Strong Partisans &  &  & 0.952*** & 0.226     \\
+  & & & (0.254)  & (0.251)   \\
+  & & & & \\  
+  $\Delta$GDP&  &  & 0.003    & 0.001     \\
+  &  &  & (0.002)   & (0.002)   \\
+  & & & & \\   
+ Constant & -0.967*   & -0.465   & -3.959*  & -0.622    \\
+  & (0.665)  & (0.563)  & 2.496    & (2.466) \\
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 19 & 19 & 19 & 19 \\ 
+Adj. R$^2$ & 0.035 & 0.213 & 0.526 & 0.491 \\
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{5}{l}{\footnotesize $^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01; one-tailed tests} \\ 
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses} \\
+\multicolumn{5}{l}{\footnotesize }
+\end{tabular} 
+\end{table} 
+
+
+
+
+% SENATE W/ GDP
+\begin{table}[!h] \centering 
+  \caption{Effects of Senate Polarization and Gridlock on Party Favorability}\vspace*{-0.1cm}
+  \label{tab:senatemods:gdp} 
+    \renewcommand{\arraystretch}{0.7}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+\\[-1ex] 
+& \multicolumn{2}{c}{SUR} & \multicolumn{2}{c}{SUR}  \\\cline{2-3} \cline{4-5} \\[-1ex]
+& In-Party & Out-Party & In-Party & Out-Party \\[0.5ex]
+%& (1) & (2) & (3) & (4)\\
+\hline \\[-1ex] 
+  $\Delta$Senate Polarization & -28.880  & -52.605** & -10.900  & -26.335  \\
+  & (36.079) & (26.326)  & (30.100) & (31.525) \\
+  & & & & \\
+  $\Delta$Gridlock & 0.015    & -0.090*** & -0.032   & -0.086***   \\
+  & (0.037)  & (0.027)   & (0.029)  & (0.030)  \\
+  & & & & \\ 
+ Divided Government &  &  & 0.455    & 1.316    \\
+  & & & (1.240)  & (1.300)  \\
+  & & & & \\ 
+ $\Delta$Pct. Strong Partisans &  &  & 0.982***    & 0.146    \\
+  & & & (0.268)  & (0.280)  \\
+  & & & & \\  
+  $\Delta$GDP&  &  & 0.003    & 0.002    \\
+  & & & (0.002)  & (0.003)  \\
+  & & & & \\   
+ Constant & -0.064   & -0.245    & -2.662   & -2.588   \\
+  & (0.656)  & (0.479)   & (2.300)  & (2.409) \\
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 19 & 19 & 19 & 19 \\ 
+Adj. R$^2$ & -0.081 & 0.346 & 0.465 & 0.345 \\
+\hline 
+\hline \\[-1.8ex] 
+\multicolumn{5}{l}{\footnotesize $^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01; one-tailed tests} \\ 
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses} \\
+\multicolumn{5}{l}{\footnotesize }
+\end{tabular} 
+\end{table} 
+
+\clearpage
+
+
+
+\section{Plot of all survey marginals}\label{app:marginals}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.95\linewidth]{Figures/AllSurveys}
+	\caption{Plot of Survey Marginals Used to Generate In-Party/Out-Party Favorability}\label{fig:marginals}
+\end{figure}
+
+
+
+\clearpage
+\printbibliography
+\end{refsection}
+\end{appendices}
+
+
+
+
+
+
+
+
+
+
+\end{document}
